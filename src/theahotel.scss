@@ -2,19 +2,94 @@
 
 @include mat-core();
 
-$theahotel-primary: mat-palette($mat-teal, 200);
-$theahotel-accent:  mat-palette($mat-teal, 50);
+$thea-primary: (
+  50 : #ffffff,
+  100 : #ffffff,
+  200 : #ffffff,
+  300 : #ddf1ef,
+  400 : #c8e8e5,
+  500 : #b2dfdb,
+  600 : #9cd6d1,
+  700 : #87cdc7,
+  800 : #71c4bd,
+  900 : #5cbbb3,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #d2f2ef,
+  A700 : #c2e9e5,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$thea-accent: (
+  50 : #ffffff,
+  100 : #ffffff,
+  200 : #ffffff,
+  300 : #ffffff,
+  400 : #ffffff,
+  500 : #fff8e1,
+  600 : #fff1c2,
+  700 : #ffeaa4,
+  800 : #ffe385,
+  900 : #ffdb67,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffffff,
+  A700 : #fffefa,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+$theahotel-primary: mat-palette($thea-primary, 700, 300, 900);
+$theahotel-accent:  mat-palette($thea-accent, 500, 400, 700);
 
 $theahotel-warn:    mat-palette($mat-red);
 
 $theahotel: mat-light-theme($theahotel-primary, $theahotel-accent, $theahotel-warn);
 
+@import './app/navigation/navtabs/navtabs.component-theme.scss';
+
 @include angular-material-theme($theahotel);
 
+// Navtabs component scss file
+@include navtabs-component-theme($theahotel);
 
 
 
-
-.navtabs-container {
-  background-color: mat-color($theahotel-accent);
+// All our styles will go here
+.mat-list-option:hover, 
+.mat-list-option.mat-list-item-focus, 
+.mat-nav-list .mat-list-item:hover, 
+.mat-nav-list .mat-list-item.mat-list-item-focus {
+  background-color: mat-color($theahotel-primary, 300);
+  color: mat-color($theahotel-primary, 900);
 }
