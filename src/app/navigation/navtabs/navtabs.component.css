@@ -1,7 +1,3 @@
 .toolbar-flex {
   flex: 1 0.5 auto;
 }
-
-.navtabs-container {
-  background-color: mat-color($theahotel-primary, 500);
-}

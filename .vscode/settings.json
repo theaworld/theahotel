@@ -1,3 +1,5 @@
 {
-  "git.ignoreLimitWarning": true
-}
+  "workbench.editor.enablePreview": false,
+  "editor.minimap.enabled": false
+  }
+  

@@ -1,15 +1,40 @@
 <div class="navtabs-container">
-  <nav mat-tab-nav-bar>
-    <span class="toolbar-flex"></span>
-    <mat-tab-group>
-      <mat-tab label="Hello 1"></mat-tab>
-      <mat-tab label="Hello 2"></mat-tab>
-      <mat-tab label="Hello 3"></mat-tab>
-      <mat-tab label="Hello 4"></mat-tab>
-      <mat-tab label="Hello 5"></mat-tab>
-      <mat-tab label="Hello 6"></mat-tab>
-    </mat-tab-group>
-    <span class="toolbar-flex"></span>
+  <nav mat-tab-nav-bar mat-tab-nav-bar fxFlex fxLayout fxLayoutAlign="center center">
+    <a mat-tab-link routerLink="/"
+     routerLinkActive #home="routerLinkActive"
+     [active]="home.isActive">
+     Home
+     </a>
+
+     <a mat-tab-link routerLink="/accomodation"
+     routerLinkActive #accomodation="routerLinkActive"
+     [active]="accomodation.isActive">
+     Accomodation
+     </a>
+
+     <a mat-tab-link routerLink="/foodandbeverage"
+     routerLinkActive #foodandbeverage="routerLinkActive"
+     [active]="foodandbeverage.isActive">
+     Food &amp; Beverage
+     </a>
+
+     <a mat-tab-link routerLink="/lifestyle"
+     routerLinkActive #lifestyle="routerLinkActive"
+     [active]="lifestyle.isActive">
+     Lifestyle
+     </a>
+
+     <a mat-tab-link routerLink="/celebrations"
+     routerLinkActive #celebrations="routerLinkActive"
+     [active]="celebrations.isActive">
+     Celebrations
+     </a>
+
+     <a mat-tab-link routerLink="/offers"
+     routerLinkActive #offers="routerLinkActive"
+     [active]="offers.isActive">
+     Offers
+     </a>
   </nav>
 </div>
 

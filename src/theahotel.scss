@@ -84,6 +84,36 @@ $theahotel: mat-light-theme($theahotel-primary, $theahotel-accent, $theahotel-wa
 @include navtabs-component-theme($theahotel);
 
 
+///////////////////////////////////////////////////////
+$thea-typography: mat-typography-config(
+  $font-family:   'Rubik, sans-serif',
+  $display-4:     mat-typography-level(112px, 112px, 300),
+  $display-3:     mat-typography-level(56px, 56px, 400),
+  $display-2:     mat-typography-level(45px, 48px, 400),
+  $display-1:     mat-typography-level(34px, 40px, 400),
+  $headline:      mat-typography-level(97.54px, 32px, 400),
+  $title:         mat-typography-level(61px, 0px, 500),
+  $subheading-2:  mat-typography-level(48.77px, 0.25px, 400),
+  $subheading-1:  mat-typography-level(34.54px, 0.25px, 400),
+  $body-2:        mat-typography-level(14.22px, 0.25px, 500),
+  $body-1:        mat-typography-level(16.26px, 0.5px, 400),
+  $caption:       mat-typography-level(12.19px, 1.25px, 400),
+  $button:        mat-typography-level(14.22px, 1.25px, 500),
+  // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+@include mat-base-typography($thea-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($thea-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($thea-typography);
+
+@include mat-core($thea-typography);
+
+
 
 // All our styles will go here
 .mat-list-option:hover, 
